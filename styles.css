@@ -1,0 +1,292 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background: aqua;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+/*MAIN SSECTION*/
+.container{
+    width: 80%;
+    height: 80%;
+    /*background: linear-gradient(to right bottom, rgba(255, 255, 255,0.8), rgba(255, 255, 255,0.8));*/
+    backdrop-filter: blur(2rem);
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 3% 0;
+    position: relative;
+    z-index: 5;
+}
+.buttons{
+    width: 30%;
+    border-radius: 20px;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255, 255, 255,0.7), rgba(255, 255, 255,0.3));
+    padding: 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-shadow: 0px 3px 3px 3px rgb(106, 238, 238);
+}
+.buttons h1{
+   text-align: center;
+}
+.buttons img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: block;
+    margin: auto;
+}
+/*radio buttons*/
+.buttons .positions{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.buttons .positions label{
+    width: 100%;
+    height: 40px;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 5px 0;
+    padding: 0 5px;
+    text-align: center;
+    padding-top: 10px;
+    transition: all 0.3s;
+    z-index: 2;
+}
+.tab-backgroundColor{
+    background: aqua;
+    width: 155px;
+    height: 40px;
+    border-radius: 10px;
+    z-index: 1;
+    position: absolute;
+    top: 0px;
+    transition: all 0.3s; 
+    margin: 5px 0px;
+} 
+
+/*When the radio input is checked the tab-backgroundColor Moves*/
+#Electrical_Engineer:checked ~ .positions .tab-backgroundColor{
+    top: 0;
+}
+#Web_developer:checked ~ .positions .tab-backgroundColor{
+    top: 50px;
+}
+#Graphic_designer:checked ~ .positions .tab-backgroundColor{
+    top: 100px;
+}
+#Resume:checked ~ .positions .tab-backgroundColor{
+    top: 150px;
+}
+#Contact_Me:checked ~ .positions .tab-backgroundColor{
+    top: 200px;
+}
+
+/*changes the text-color to white when the radio input is checked*/
+#Electrical_Engineer:checked ~ .positions .Electrical_Engineer,
+#Web_developer:checked ~ .positions .Web_developer,
+#Graphic_designer:checked ~ .positions .Graphic_designer,
+#Resume:checked ~ .positions .Resume, 
+#Contact_Me:checked ~ .positions .Contact_Me{
+    color: white;
+}
+
+/*Removes the radio inputs icons */
+input[type="radio"]{
+    display: none;
+}
+
+/*Displays the content when the radio input is checked*/
+#Electrical_Engineer:checked ~ .content-Electrical_Engineer,
+#Web_developer:checked ~  .content-Web_Developer,
+#Graphic_designer:checked ~  .content-Graphic_Designer,
+#Resume:checked ~ .content-Resume,
+#Contact_Me:checked ~ .content-Contact_Me
+{
+    display: block;
+} 
+
+/* CONTENT SECTION*/
+.content{
+    border-radius: 20px;
+    height: 100%;
+    width: 233%;
+    padding: 5px 20px;
+    background: linear-gradient(to right, rgba(255, 255, 255,0.7), rgba(255, 255, 255,0.3));
+    position: absolute;
+    top: 0px ;
+    left: 100%;  
+    box-shadow: 5px 3px 3px 3px rgb(106, 238, 238);
+}
+
+.content-Resume a{
+    margin-top: 20px;
+    text-decoration: none;
+    display: inline-block;
+    width: 100px;
+    height: 5%;
+    background: linear-gradient( aqua, rgba(56, 235, 235,0.3));
+    text-align: center;
+    padding:5px 0px;
+    border-radius: 5px;
+    color: black;
+    transform: scale(1.1,1.1);
+}
+.content-Resume a:hover{
+    background: linear-gradient( #38ebeb4d,aqua);
+    color: white;
+}
+
+/*styles for the form */
+.content-Contact_Me form {
+    display: flex;
+    flex-direction: column;
+}
+
+.content-Contact_Me label {
+    margin-top: 10px;
+}
+
+.content-Contact_Me input,
+.content-Contact_Me textarea {
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.content-Contact_Me button {
+    padding: 10px;
+    background-color: aqua;
+    color: white;
+    cursor: pointer;
+}
+
+.content-Contact_Me button:hover {
+    background-color: #00bcd4;
+}
+.content-Contact_Me .social-media a{
+    text-decoration: none;
+    color:rgb(26, 25, 25) ;
+}
+
+.buttons .content-Electrical_Engineer,
+.buttons .content-Web_Developer,
+.buttons .content-Graphic_Designer,
+.buttons .content-Resume,
+.buttons .content-Contact_Me{
+    display: none;
+}
+
+/*CIRCLES*/
+.circle{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    box-shadow: 5px 3px 3px 3px rgb(106, 238, 238);
+    background: linear-gradient(to left bottom, rgba(255, 255, 255,0.5), rgba(255, 255, 255,0.5));
+}
+.circles .one{
+    position: absolute;
+    top: -5%;
+    right: 4%;  
+    transform: rotate(-50deg);
+}
+.circles .two{
+    position: absolute;
+    bottom: -5%;
+    left: 4%;  
+    transform: rotate(100deg)
+}
+
+
+  
+  /* Media Query for Small Screens (max-width: 600px) */
+@media screen and (max-width: 600px) {
+    .buttons {
+      flex-direction: column;
+    }
+    .buttons img{
+        width: 100px;
+        height: 100px;
+    }
+  
+    .positions label {
+      font-size: 14px;
+    }
+    .buttons .positions{
+        gap: 30%;
+    }
+    .buttons .positions .Electrical_Engineer,
+    .buttons .positions .Graphic_designer{
+        margin-bottom: 15%;
+    }
+    .tab-backgroundColor{
+        width: 95% ;
+        top: 10px;
+    }
+    #Electrical_Engineer:checked ~ .positions .tab-backgroundColor{
+        top: 0;
+    }
+    #Web_developer:checked ~ .positions .tab-backgroundColor{
+        top: 65px;
+    }
+    #Graphic_designer:checked ~ .positions .tab-backgroundColor{
+        top: 110px;
+    }
+    #Resume:checked ~ .positions .tab-backgroundColor{
+        top: 180px;
+    }
+    #Contact_Me:checked ~ .positions .tab-backgroundColor{
+        top: 230px;
+    }
+    #Electrical_Engineer:checked ~ .positions .tab-backgroundColor,
+    #Graphic_designer:checked ~ .positions .tab-backgroundColor{
+        height: 23%;
+    }
+    .content {
+      padding: 5px;
+    }
+  
+    .content-Resume a {
+      width: 70%;
+      transform: translateX(20%);
+    }
+}
+  
+/* Media Query for Medium Screens (min-width: 601px) and (max-width: 900px) */
+@media screen and (min-width: 601px) and (max-width: 900px) {
+}  
+  
+/* Media Query for Large Screens (min-width: 901px) */
+@media screen and (min-width: 901px) {
+    .container {
+      width: 80%;
+    }
+  
+    .buttons {
+      width: 30%;
+    }
+  
+    .positions label {
+      font-size: 18px;
+    }
+  
+    .content {
+      padding: 20px;
+    }
+}
+  

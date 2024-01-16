@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vertical tabs</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+    <!--MAIN SECTION-->
+    <div class="container">
+        <div class="buttons">
+            <h1>Profile</h1>
+            <img src="/Images/kim.png" alt="Kim's picture" class="centered-image">
+            <p style="text-align: center">Josphat Kimani Njane</p>
+            
+            <input type="radio" name="tab" id="Electrical_Engineer">
+            <input type="radio" name="tab" id="Web_developer">
+            <input type="radio" name="tab" id="Graphic_designer">
+            <input type="radio" name="tab" id="Resume">
+            <input type="radio" name="tab" id="Contact_Me">
+            
+            <div class="positions">
+                <label for="Electrical_Engineer" class="Electrical_Engineer">Electrical Engineer</label>
+                <label for="Web_developer" class="Web_developer">Web Developer</label>
+                <label for="Graphic_designer" class="Graphic_designer">Graphic Designer</label>
+                <label for="Resume" class="Resume">Resume</label>
+                <label for="Contact_Me" class="Contact_Me">Contact Me</label>
+                <div class="tab-backgroundColor"></div>
+            </div> 
+
+            <!--Electrical Engineer Contents-->
+            <div class="content content-Electrical_Engineer">
+                <h2>Skills :</h2>
+                <h3>Technical skills:</h3>
+                <p>Circuit Design</p>
+                <p>Programming languages: Python and C++</p>
+                <p>Power System</p>
+
+                <h3>Software Tools:</h3>
+                <p>CAD Software: AutoCAD </p>
+                <p>Simulation Software: MATLAB and simulink</p>
+            </div>
+
+            <!--Web Developer Contents-->
+            <div class="content content-Web_Developer">
+                <h2>Services:</h2>
+                <p>Building Landing Pages</p>
+                <p>Designing HTML Email templates</p>
+                <p>Designing websites</p>
+                <p>Building portfolio's</p>
+            </div>
+                
+            <!--Graphic designer Contents-->
+            <div class="content content-Graphic_Designer">
+                <h2>Services:</h2>
+                <p>Photo edditing</p>
+                <p>You-tube Thumnails</p>
+                <p>Logo Design</p>
+                <p>Business card design</p>
+            </div>   
+
+            <!--Resume Contents-->
+            <div class="content content-Resume">
+                <h2>Resume</h2>
+                <p>
+                    I'm a recent electrical engineering graduate who's not just about circuits and wires—I'm also a self-taught web developer and graphic designer, blending the best of both worlds. 
+                    I'm on the lookout for a gig where I can fuse my tech skills with my creative side. I want to dive into cool projects where my love for engineering, web development, and design can come together to make something awesome.
+                    If you're after someone who's all about bringing innovation with a dash of creativity, well, that's me. 
+                    Let's make things happen!
+                </p>
+                <a href="CV.pdf" download>Download</a>
+            </div>  
+
+            <!--Contact Contents-->
+            <div class="content content-Contact_Me">
+                <h2>Contact Information:</h2>
+                <form id="contactForm" action="https://formspree.io/f/mgegvnpn" method="POST" name="ContactForm">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+
+                    <button type="submit">Submit</button><br><br>
+
+                    <h2>Social media platforms:</h2>
+                    <div class="social-media">
+                        <div class="facebook-link">
+                          <a href="https://www.facebook.com/profile.php?id=61554131510517" target="_blank"><i class="fa-brands fa-facebook"></i>&nbsp; Facebook</a>
+                        </div>
+                        <div class="instagram-link">
+                          <a href="https://www.instagram.com/joskim072/" target="_blank"><i class="fa-brands fa-square-instagram"></i>&nbsp; instagram</a>
+                        </div>
+                        <div class="linkedin-link">
+                          <a href="https://www.linkedin.com/in/josphat-kimani-202a7a270/" target="_blank"><i class="fa-brands fa-linkedin"></i>&nbsp; LinkedIn</a>
+                        </div>
+                        <div class="youtube-link">
+                          <a href="https://www.youtube.com/channel/UCF65VzoL68ofxtRKMC443wQ" target="_blank"><i class="fa-brands fa-youtube"> </i>&nbsp; Youtube</a>
+                        </div>
+                        <div class="whatsapp-link">
+                          <a href="" target="_blank"><i class="fa-brands fa-square-whatsapp"></i>&nbsp; Whatsapp</a>
+                        </div>
+          
+                      </div>
+                </form>
+            </div>   
+        </div>
+    </div>
+    <div class="circles">
+        <div class="circle one"></div>
+        <div class="circle two"></div>
+    </div>
+
+    
+</body>
+</html>
